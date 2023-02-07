@@ -9,7 +9,6 @@ dependencies:
   - oauthlib=3.2.2=pyhd8ed1ab_0
   - toml=0.10.2=pyhd3eb1b0_0
   - streamlit==1.16.0
-  - streamlib
   - pip
   - pip:
     - gsheetsdb==0.1.13.1
