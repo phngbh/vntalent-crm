@@ -2,13 +2,13 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import gspread
-from oauth2client.service_account import ServiceAccountCredentials
+from google.oauth2 import service_account
 
 st.title('Trang tra cứu thông tin')
 
 # Obtain the Google Sheet credentials
 scope = ['https://spreadsheets.google.com/feeds', 'https://www.googleapis.com/auth/drive']
-creds = ServiceAccountCredentials.from_json_keyfile_name('gifted-decker-376409-712e5c6639b5.json', scope)
+creds = service_account.Credentials.from_service_account_info(st.secrets["gcp_service_account"], scopes = scope)
 client = gspread.authorize(creds)
 
 # Open the Google Sheet
