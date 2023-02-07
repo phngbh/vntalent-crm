@@ -1,0 +1,9 @@
+streamlit
+numpy
+pandas
+gspread
+matplotlib
+google-auth
+google-auth-oauthlib
+oauth2client
+oauthlib
